@@ -31,54 +31,62 @@ const Hero = () => {
       <div className="container-custom relative z-10 px-4 py-8 sm:py-0">
         <div className="text-center text-white">
           <div className={`transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 leading-tight mt-8 sm:mt-0">
-              <span className="block">Transforming</span>
-              <span className="block text-secondary">Workplace Safety</span>
+            {/* Founder's Vision Badge */}
+            <div className="inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-6 py-2 mb-6 border border-white/30">
+              <span className="text-sm font-medium">🇬🇧 UK Innovator Founder • Vision 2030 Aligned</span>
+            </div>
+
+            <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 leading-tight">
+              <span className="block">Transforming Safety Culture</span>
+              <span className="block text-secondary">Through Ethical Innovation</span>
             </h1>
 
             <p
-              className={`text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-4 transition-all duration-1000 delay-300 ${
+              className={`text-lg sm:text-xl md:text-2xl lg:text-3xl mb-8 max-w-4xl mx-auto leading-relaxed px-4 transition-all duration-1000 delay-300 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
               }`}>
-              Bridging the gap between regulatory compliance and real-world workplace safety through
-              <span className="text-secondary font-semibold"> AI-powered insights</span>,
-              <span className="text-secondary font-semibold"> multimedia training</span>, and
-              <span className="text-secondary font-semibold"> adaptive safety ecosystems</span>.
+              Pioneering the future of <span className="text-secondary font-semibold">digital HSE solutions</span> with
+              <span className="text-secondary font-semibold"> AI-powered analytics</span>, scalable training platforms, and
+              <span className="text-secondary font-semibold"> measurable safety outcomes</span> for Vision 2030 compliance.
             </p>
 
             <div
-              className={`flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4 transition-all duration-1000 delay-500 ${
+              className={`flex flex-col sm:flex-row gap-4 justify-center px-4 transition-all duration-1000 delay-500 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
               }`}>
               <a
-                href="#about"
-                className="bg-white text-primary px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-xl">
-                Discover Our Vision
+                href="#platform"
+                className="bg-white text-primary px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-xl">
+                Start Your Safety Audit
               </a>
               <a
-                href="#contact"
-                className="border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg hover:bg-white hover:text-primary transition-all duration-300 transform hover:scale-105">
-                Get Started
+                href="#innovation"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-primary transition-all duration-300 transform hover:scale-105">
+                Download Innovation Brief
               </a>
             </div>
           </div>
 
-          {/* Key Statistics */}
+          {/* Enhanced Key Statistics */}
           <div
-            className={`mt-12 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 px-4 transition-all duration-1000 delay-700 ${
+            className={`mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-4 transition-all duration-1000 delay-700 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}>
-            <div className="glass-effect p-4 sm:p-6">
-              <div className="text-2xl sm:text-3xl font-bold text-secondary mb-2">AI-Powered</div>
-              <div className="text-sm sm:text-base lg:text-lg">Intelligent Analytics</div>
+            <div className="glass-effect p-6 text-center">
+              <div className="text-3xl font-bold text-secondary mb-2">30%</div>
+              <div className="text-lg font-medium">Incident Reduction</div>
             </div>
-            <div className="glass-effect p-4 sm:p-6">
-              <div className="text-2xl sm:text-3xl font-bold text-secondary mb-2">Compliance</div>
-              <div className="text-sm sm:text-base lg:text-lg">Automation</div>
+            <div className="glass-effect p-6 text-center">
+              <div className="text-3xl font-bold text-secondary mb-2">AI-Powered</div>
+              <div className="text-lg font-medium">Risk Analytics</div>
             </div>
-            <div className="glass-effect p-4 sm:p-6 sm:col-span-2 lg:col-span-1">
-              <div className="text-2xl sm:text-3xl font-bold text-secondary mb-2">Dynamic</div>
-              <div className="text-sm sm:text-base lg:text-lg">Safety Ecosystem</div>
+            <div className="glass-effect p-6 text-center">
+              <div className="text-3xl font-bold text-secondary mb-2">50+</div>
+              <div className="text-lg font-medium">Corporate Clients (Q1 2026)</div>
+            </div>
+            <div className="glass-effect p-6 text-center">
+              <div className="text-3xl font-bold text-secondary mb-2">Vision 2030</div>
+              <div className="text-lg font-medium">Compliant</div>
             </div>
           </div>
         </div>

@@ -4,24 +4,28 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#23356B",
-        secondary: "#48A146",
-        accent: "#1A8177",
-        background: "#F4F6F8",
-        text: "#2A2A2A",
-        heading: "#23356B",
-        border: "#D1D5DB",
-        hover: "#1A8177",
+        primary: "#1E40AF", // Deep blue like NEBOSH
+        secondary: "#059669", // Professional green
+        accent: "#DC2626", // Confident red like NEBOSH
+        background: "#F8FAFC",
+        text: "#1F2937",
+        "text-light": "#6B7280",
+        heading: "#1E40AF",
+        border: "#E5E7EB",
+        hover: "#1D4ED8",
         muted: "#9CA3AF",
+        white: "#FFFFFF",
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
+        serif: ["Playfair Display", "serif"],
       },
       animation: {
         "fade-in": "fadeIn 0.6s ease-in-out",
         "slide-up": "slideUp 0.8s ease-out",
         "bounce-in": "bounceIn 1s ease-out",
         float: "float 3s ease-in-out infinite",
+        "pulse-slow": "pulse 3s ease-in-out infinite",
       },
       keyframes: {
         fadeIn: {

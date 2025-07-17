@@ -18,9 +18,9 @@ const Header = () => {
 
   const navItems = [
     { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Services", href: "#services" },
-    { name: "Features", href: "#features" },
+    { name: "About & Vision", href: "#about" },
+    { name: "Solutions", href: "#services" },
+    { name: "Case Studies", href: "#case-studies" },
     { name: "Contact", href: "#contact" },
   ];
 
@@ -39,12 +39,21 @@ const Header = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <Link key={item.name} href={item.href} className="text-text hover:text-primary transition-colors duration-300 font-medium">
+              <Link
+                key={item.name}
+                href={item.href}
+                className={`font-medium transition-colors duration-300 ${
+                  isScrolled ? "text-gray-700 hover:text-primary" : "text-white hover:text-secondary"
+                }`}>
                 {item.name}
               </Link>
             ))}
-            <Link href="#contact" className="btn-primary">
-              Get Started
+            <Link
+              href="#contact"
+              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg ${
+                isScrolled ? "bg-primary text-white hover:bg-hover shadow-lg" : "bg-white text-primary hover:bg-gray-100"
+              }`}>
+              Book Your Discovery Call
             </Link>
           </div>
 
@@ -53,27 +62,41 @@ const Header = () => {
             className="md:hidden w-8 h-8 flex items-center justify-center"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle mobile menu">
-            <div className={`w-6 h-0.5 bg-text transition-all duration-300 ${isMobileMenuOpen ? "rotate-45 translate-y-0.5" : ""}`}></div>
-            <div className={`w-6 h-0.5 bg-text transition-all duration-300 mt-1 ${isMobileMenuOpen ? "opacity-0" : ""}`}></div>
-            <div className={`w-6 h-0.5 bg-text transition-all duration-300 mt-1 ${isMobileMenuOpen ? "-rotate-45 -translate-y-1.5" : ""}`}></div>
+            <div
+              className={`w-6 h-0.5 transition-all duration-300 ${isScrolled ? "bg-gray-700" : "bg-white"} ${
+                isMobileMenuOpen ? "rotate-45 translate-y-0.5" : ""
+              }`}></div>
+            <div
+              className={`w-6 h-0.5 transition-all duration-300 mt-1 ${isScrolled ? "bg-gray-700" : "bg-white"} ${
+                isMobileMenuOpen ? "opacity-0" : ""
+              }`}></div>
+            <div
+              className={`w-6 h-0.5 transition-all duration-300 mt-1 ${isScrolled ? "bg-gray-700" : "bg-white"} ${
+                isMobileMenuOpen ? "-rotate-45 -translate-y-1.5" : ""
+              }`}></div>
           </button>
         </div>
 
         {/* Mobile Menu */}
         <div className={`md:hidden transition-all duration-300 overflow-hidden ${isMobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}`}>
-          <div className="py-4 space-y-4">
+          <div className="py-4 space-y-4 bg-white/95 backdrop-blur-lg rounded-lg mt-2">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="block text-text hover:text-primary transition-colors duration-300 font-medium"
+                className="block px-4 text-gray-700 hover:text-primary transition-colors duration-300 font-medium"
                 onClick={() => setIsMobileMenuOpen(false)}>
                 {item.name}
               </Link>
             ))}
-            <Link href="#contact" className="btn-primary inline-block" onClick={() => setIsMobileMenuOpen(false)}>
-              Get Started
-            </Link>
+            <div className="px-4">
+              <Link
+                href="#contact"
+                className="bg-primary text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg inline-block"
+                onClick={() => setIsMobileMenuOpen(false)}>
+                Book Your Discovery Call
+              </Link>
+            </div>
           </div>
         </div>
       </nav>

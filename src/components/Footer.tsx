@@ -6,9 +6,10 @@ const Footer = () => {
 
   const quickLinks = [
     { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Services", href: "#services" },
-    { name: "Features", href: "#features" },
+    { name: "About & Vision", href: "#about" },
+    { name: "Platform Innovation", href: "#platform" },
+    { name: "Solutions", href: "#services" },
+    { name: "Case Studies", href: "#case-studies" },
     { name: "Contact", href: "#contact" },
   ];
 
@@ -36,8 +37,14 @@ const Footer = () => {
               </Link>
 
               <p className="text-gray-300 mb-6 leading-relaxed">
-                Revolutionizing workplace safety with comprehensive digital HSE solutions for high-risk industries.
+                UK Innovator Founder backed digital HSE platform transforming workplace safety through ethical innovation and Vision 2030 alignment.
               </p>
+
+              <div className="mb-6">
+                <div className="inline-flex items-center bg-white/10 rounded-full px-4 py-2 mb-4">
+                  <span className="text-sm font-medium">🇬🇧 UK Innovator Founder • Vision 2030</span>
+                </div>
+              </div>
 
               <div className="flex space-x-4">
                 <a
@@ -115,6 +122,29 @@ const Footer = () => {
                   </svg>
                 </Link>
               </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Credibility Section */}
+        <div className="border-t border-white/20 py-12">
+          <div className="text-center mb-8">
+            <h3 className="text-xl font-semibold text-white mb-4">Trusted by Industry Leaders</h3>
+            <p className="text-gray-300">Recognized certifications and partnerships</p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
+            <div className="bg-white/10 rounded-lg p-4 w-24 h-16 flex items-center justify-center">
+              <span className="text-white font-bold text-xs">ISO 45001</span>
+            </div>
+            <div className="bg-white/10 rounded-lg p-4 w-24 h-16 flex items-center justify-center">
+              <span className="text-white font-bold text-xs">NEBOSH</span>
+            </div>
+            <div className="bg-white/10 rounded-lg p-4 w-24 h-16 flex items-center justify-center">
+              <span className="text-white font-bold text-xs">IOSH</span>
+            </div>
+            <div className="bg-white/10 rounded-lg p-4 w-24 h-16 flex items-center justify-center">
+              <span className="text-white font-bold text-xs">UK Gov</span>
             </div>
           </div>
         </div>

@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --color-primary: #1e40af;
+  --color-secondary: #059669;
+  --color-accent: #dc2626;
+  --color-background: #f8fafc;
+  --color-text: #1f2937;
+  --color-text-light: #6b7280;
+  --color-white: #ffffff;
+  --color-hover: #1d4ed8;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -9,6 +22,16 @@
 
   body {
     font-family: "Inter", system-ui, sans-serif;
+    color: var(--color-text);
+    background-color: var(--color-background);
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    color: var(--color-primary);
   }
 }
 

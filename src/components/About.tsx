@@ -27,13 +27,35 @@ const About = () => {
     <section id="about" ref={sectionRef} className="section-padding bg-white">
       <div className="container-custom">
         <div className={`transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
-          <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-heading mb-4 sm:mb-6 px-4">
-              About <span className="text-secondary">LEOSHe</span>
+          <div className="text-center mb-16">
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-heading mb-6 px-4">
+              About <span className="text-secondary">LEOSHe</span> & Our Vision
             </h2>
-            <p className="text-lg sm:text-xl text-muted max-w-3xl mx-auto px-4">
-              Global leader in digital HSE solutions, transforming workplace safety through technology-driven innovation
+            <p className="text-xl text-muted max-w-4xl mx-auto px-4 leading-relaxed">
+              A UK Innovator Founder visa backed digital HSE platform transforming workplace safety through ethical innovation and Vision 2030
+              alignment
             </p>
+          </div>
+
+          {/* Founder's Vision Section */}
+          <div className={`mb-16 transition-all duration-1000 delay-200 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+            <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-8 border border-primary/20">
+              <div className="flex items-center justify-center mb-6">
+                <div className="inline-flex items-center bg-primary/20 rounded-full px-6 py-3">
+                  <span className="text-primary font-semibold">🇬🇧 UK Innovator Founder • Vision 2030 Aligned</span>
+                </div>
+              </div>
+              <h3 className="font-serif text-3xl font-bold text-center text-heading mb-6">Founder's Vision</h3>
+              <blockquote className="text-center text-xl italic text-text leading-relaxed max-w-4xl mx-auto">
+                "To revolutionize workplace safety through ethical innovation, leveraging cutting-edge technology to create measurable impact in
+                high-risk industries. Our platform bridges the critical gap between regulatory compliance and real-world safety outcomes, aligning
+                with Vision 2030's commitment to innovation and economic diversification."
+              </blockquote>
+              <div className="text-center mt-6">
+                <div className="text-lg font-semibold text-primary">Backed by UK Innovator Founder Visa</div>
+                <div className="text-muted">Recognized for exceptional innovation potential in digital HSE solutions</div>
+              </div>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
