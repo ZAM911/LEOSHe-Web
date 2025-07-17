@@ -36,27 +36,34 @@ const CaseStudies = () => {
         quote: "LEOSHe's platform transformed our safety culture. The predictive analytics helped us prevent incidents before they occurred.",
         author: "Sarah Mitchell",
         position: "HSE Director",
-        company: "Global Energy Corp"
-      }
+        company: "Global Energy Corp",
+      },
     },
     {
       title: "Aviation Safety Excellence Program",
-      description: "International airline implemented LEOSHe's comprehensive training and monitoring system, achieving industry-leading safety metrics.",
+      description:
+        "International airline implemented LEOSHe's comprehensive training and monitoring system, achieving industry-leading safety metrics.",
       image: "/aviation-safety.jpg",
       category: "Aviation",
       client: "Sky International Airlines",
       timeline: "12 months",
-      results: ["50% reduction in safety incidents", "85% improvement in crew response time", "100% regulatory compliance", "Enhanced passenger confidence"],
+      results: [
+        "50% reduction in safety incidents",
+        "85% improvement in crew response time",
+        "100% regulatory compliance",
+        "Enhanced passenger confidence",
+      ],
       testimonial: {
         quote: "The immersive VR training modules revolutionized our safety preparation. Our crews are more confident and better prepared.",
         author: "Captain James Rodriguez",
         position: "Chief Pilot & Safety Officer",
-        company: "Sky International Airlines"
-      }
+        company: "Sky International Airlines",
+      },
     },
     {
       title: "Mega Infrastructure Project Success",
-      description: "$500M infrastructure project completed ahead of schedule with zero lost-time incidents using LEOSHe's integrated safety platform.",
+      description:
+        "$500M infrastructure project completed ahead of schedule with zero lost-time incidents using LEOSHe's integrated safety platform.",
       image: "/construction-infrastructure.jpg",
       category: "Construction",
       client: "MegaBuild Construction",
@@ -66,8 +73,8 @@ const CaseStudies = () => {
         quote: "LEOSHe's platform enabled us to maintain the highest safety standards while accelerating project delivery. Exceptional results.",
         author: "Dr. Ahmed Al-Rashid",
         position: "Project Director",
-        company: "MegaBuild Construction"
-      }
+        company: "MegaBuild Construction",
+      },
     },
   ];
 
@@ -86,23 +93,17 @@ const CaseStudies = () => {
 
           <div className="space-y-20">
             {caseStudies.map((study, index) => (
-              <div
-                key={index}
-                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? "lg:grid-flow-col-dense" : ""}`}>
-                
+              <div key={index} className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? "lg:grid-flow-col-dense" : ""}`}>
                 {/* Content */}
                 <div
                   className={`transition-all duration-1000 delay-300 ${
                     isVisible ? "opacity-100 translate-x-0" : index % 2 === 0 ? "opacity-0 -translate-x-10" : "opacity-0 translate-x-10"
                   } ${index % 2 === 1 ? "lg:col-start-2" : ""}`}>
-                  
                   <div className="flex items-center gap-4 mb-6">
-                    <span className="inline-block bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      {study.category}
-                    </span>
+                    <span className="inline-block bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold">{study.category}</span>
                     <span className="text-muted font-medium">{study.timeline} timeline</span>
                   </div>
-                  
+
                   <h3 className="font-serif text-3xl font-bold text-heading mb-4">{study.title}</h3>
                   <div className="text-lg font-semibold text-primary mb-4">Client: {study.client}</div>
                   <p className="text-lg text-muted mb-8 leading-relaxed">{study.description}</p>
@@ -125,12 +126,13 @@ const CaseStudies = () => {
 
                   {/* Testimonial */}
                   <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-6 border-l-4 border-primary">
-                    <blockquote className="text-lg italic text-text mb-4 leading-relaxed">
-                      "{study.testimonial.quote}"
-                    </blockquote>
+                    <blockquote className="text-lg italic text-text mb-4 leading-relaxed">"{study.testimonial.quote}"</blockquote>
                     <div className="flex items-center space-x-4">
                       <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold">
-                        {study.testimonial.author.split(' ').map(n => n[0]).join('')}
+                        {study.testimonial.author
+                          .split(" ")
+                          .map((n) => n[0])
+                          .join("")}
                       </div>
                       <div>
                         <div className="font-semibold text-heading">{study.testimonial.author}</div>
@@ -144,11 +146,13 @@ const CaseStudies = () => {
                     <button className="bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-hover transition-colors duration-300 flex items-center space-x-2">
                       <span>Download Full Case Study</span>
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                        />
                       </svg>
-                    </button>
-                  </div>
-                </div>
                     </button>
                   </div>
                 </div>
