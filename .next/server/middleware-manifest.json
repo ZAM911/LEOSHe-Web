@@ -1,6 +1,36 @@
 {
   "version": 3,
   "middleware": {},
-  "functions": {},
+  "functions": {
+    "/page": {
+      "files": [
+        "server/server-reference-manifest.js",
+        "server/app/page_client-reference-manifest.js",
+        "server/middleware-build-manifest.js",
+        "server/middleware-react-loadable-manifest.js",
+        "server/next-font-manifest.js",
+        "server/interception-route-rewrite-manifest.js",
+        "server/edge-runtime-webpack.js",
+        "server/app/page.js"
+      ],
+      "name": "app/page",
+      "page": "/page",
+      "matchers": [
+        {
+          "regexp": "^/$",
+          "originalSource": "/"
+        }
+      ],
+      "wasm": [],
+      "assets": [],
+      "env": {
+        "__NEXT_BUILD_ID": "development",
+        "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "SnNu8KvSkAH5VTjFYIUbbhZZ6tC9BsfOZ7R6KUs6gXs=",
+        "__NEXT_PREVIEW_MODE_ID": "d6e9eb17ea65e96d2a2a47424f54040c",
+        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "42e839ed71132dc0802d6001afce732447284a35b7e6b9fae73e6f691efa1132",
+        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "d424cceafb1fee6b86123c9792a628c49325770aa8e4232ca4cb4b326f9a437b"
+      }
+    }
+  },
   "sortedMiddleware": []
 }

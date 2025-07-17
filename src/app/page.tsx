@@ -7,6 +7,8 @@ import CaseStudies from "@/components/CaseStudies";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
+export const runtime = "edge";
+
 export default function Home() {
   return (
     <main className="min-h-screen">
